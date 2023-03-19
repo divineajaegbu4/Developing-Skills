@@ -1,0 +1,28 @@
+.form_control {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.form_control input {
+  outline: 0;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+/* 
+.form_control input:focus {
+  border: 1px solid cornflowerblue;
+  background-color: pink;
+} */
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.error_input {
+  border: 1px solid red;
+}
+
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.container {
+    background-color: whitesmoke;
+    width: 700px;
+}
+.form_control input,
+.textarea {
+  width: 400px;
+  padding: 1rem 2rem;
+}
+
+.select {
+  width: 500px;
+  padding: 1rem 2rem;
+}
+
+button {
+  width: 550px;
+  padding: 1rem 2rem;
+}
+
+.pick_option {
+  display: grid;
+  width: 80%;
+  align-items: center;
+  /* grid-template-columns: repeat(2, 50px); */
+}
+
+.form_control input:focus,
+.form_control .textarea:focus,
+.select:focus,
+button:hover {
+  background: cornflowerblue;
+  border: 2px solid orange;
+  filter: blur(1px);
+}
