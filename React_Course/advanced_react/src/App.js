@@ -17,6 +17,8 @@ import SpreadOperator from "./Component/SpreadOperator";
 import SignUp from "./Component/SignUp";
 import Tracker from "./Component/Higher-Order-Component(HOC)";
 import DessertFn from "./Component/DataFetcher";
+import HorizontalLabelPositionBelowStepper from "./Stepper/Stepper";
+import RootForm from "./Component/Practice/Formik-Form/RootForm";
 
 
 
@@ -104,6 +106,8 @@ export default function App() {
       <SignUp />
       <Tracker />
       <DessertFn />
+
+      /******************Stepper******************* */
     </div>
   );
 }

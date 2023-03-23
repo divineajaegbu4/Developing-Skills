@@ -15,7 +15,7 @@ function Children() {
         )
     }
 
-    const DeleteBtn = () => {
+    const SpecializationDeleteBtn = () => {
         return <Button backgroundColor="red" cursor="pointer">Delete</Button>
     }
 
@@ -27,7 +27,7 @@ function Children() {
                 <p>Flower</p>
                 <p>Tomatoes</p>
                 <p>Chicken</p>
-                <DeleteBtn />
+                <SpecializationDeleteBtn />
             </ContainermentOverlay>
 
         </>

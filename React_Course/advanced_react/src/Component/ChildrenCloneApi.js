@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children, cloneElement } from 'react'
 
 const Row = ({ children, spacing }) => {
 
@@ -8,8 +8,8 @@ const Row = ({ children, spacing }) => {
 
     return (
         <div className='general'>
-            {React.Children.map(children, (child, index) => {
-                return React.cloneElement(child, {
+            {Children.map(children, (child, index) => {
+                return cloneElement(child, {
                     style: {
                         ...child.props.style,
                         ...(index > 0 ? computeStyle : {})

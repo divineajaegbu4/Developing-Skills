@@ -2,6 +2,15 @@ import React, { useState, useEffect } from "react"
 
 
 const FetchingData = () => {
+    const object1 = {
+        a: "Divine",
+        b: "Albert",
+        c: "Sina"
+    }
+
+    console.log("object.keys", Object.keys(object1))
+    console.log("object", object1)
+
     const [user, setUser] = useState([]);
 
     const fetchDataHandler = () => {
