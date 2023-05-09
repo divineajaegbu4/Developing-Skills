@@ -20,7 +20,8 @@ const FormControlHandler = ({ assest, roleFunctions, gender, submitForm, isSubmi
 }
 
 const RootForm = () => {
-    const FormControlInputs = LoginForm(FormControlHandler)
+    const FormControlInputs = LoginForm(FormControlHandler);
+    
 
     return (
         <FormControlInputs />

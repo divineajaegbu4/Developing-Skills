@@ -6,6 +6,7 @@ function ArrayDestructuring() {
     const [v1, v2, v3] = cars
 
     console.log(v1, v2, v3)
+    
     return (
         <section>
             <div>V1: {v1}</div>

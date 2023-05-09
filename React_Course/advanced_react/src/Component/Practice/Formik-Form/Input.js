@@ -18,6 +18,11 @@ export const Input = (props) => {
 
 
 export const Gender = (props) => {
+  let arr = ["boy", "girl", "parents"]
+  const [ v1, v2, v3 ] = arr;
+
+  console.log("v1", v1)
+  console.log("boy", arr[0])
   const { name, label, gender, ...rest } = props;
 
   return (
@@ -30,7 +35,7 @@ export const Gender = (props) => {
 
           gender?.map((gender) => {
             return (
-              <option key={gender?.id} value={gender?.value}>{gender?.value}</option>
+              <option key={gender?.id} value={gender?.value} label={gender?.value} />
             )
           })
         }
