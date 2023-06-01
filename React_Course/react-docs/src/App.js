@@ -1,26 +1,35 @@
 import React, { useState } from "react";
-import './App.css';
+import "./App.css";
 import {
   AboutPage,
   RespondingToEvents,
   UpdatingTheScreen,
   RenderingList,
   SeperateUpdatingTheScreen,
-  CreatingAndNestingComponent
-} from './Component/QuickStart/CreatingAndNestingComponent';
+  CreatingAndNestingComponent,
+} from "./Component/QuickStart/CreatingAndNestingComponent";
 import DisplayList from "./Component/QuickStart/DisplayList";
-import { Components } from "./Component/DescribingUI/Components"
-import Component from "./Component/AddingInteractivity/Components"
+import { Components } from "./Component/DescribingUI/Components";
+import Component from "./Component/AddingInteractivity/Components";
 
-import "./Component/QuickStart/style.css"
-
+import "./Component/QuickStart/style.css";
+import ManagingState from "./Component/MangingState";
 
 function App() {
   const [count, setCount] = useState(0);
 
   const counter = () => {
-    setCount(count + 1)
-  }
+    setCount(count + 1);
+  };
+
+  const initialValues = [1, 2, 3, 4, 5];
+
+  const reduceFn = initialValues?.reduce((acc, elem) => {
+    return elem + acc;
+  });
+
+  console.log("reduce", reduceFn);
+
   return (
     <div className="App">
       <h1>Adding Interactivity</h1>
@@ -42,11 +51,10 @@ function App() {
       <SeperateUpdatingTheScreen />
       {/**************************** */}
       <DisplayList />
-
+      <ManagingState />
+      <br />
       <header>Describing the UI</header>
       <Components />
-
-
     </div>
   );
 }

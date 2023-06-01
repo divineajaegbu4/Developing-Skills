@@ -20,8 +20,6 @@ import DessertFn from "./Component/DataFetcher";
 import HorizontalLabelPositionBelowStepper from "./Stepper/Stepper";
 import RootForm from "./Component/Practice/Formik-Form/RootForm";
 
-
-
 export default function App() {
   const [name, setName] = useState("");
   const [score, setScore] = useState("10");
@@ -37,15 +35,15 @@ export default function App() {
     let dataList = {
       content: `${dessert.title} - ${dessert.description}`,
       price: dessert.price,
-    }
+    };
 
     return (
       <div key={dessert.id}>
         <li>{dataList.content}</li>
         <li>price: {dataList.price}</li>
       </div>
-    )
-  })
+    );
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,9 +55,7 @@ export default function App() {
     e.preventDefault();
 
     if (Number(score) <= 5 && comment.length <= 10) {
-      alert(
-        "Please provide a comment explaining why the experience was poor."
-      );
+      alert("Please provide a comment explaining why the experience was poor.");
       return;
     }
 
@@ -68,21 +64,25 @@ export default function App() {
     setScore("10");
   };
 
-  console.log("Data", data)
+  console.log("Data", data);
+
+  // reduce
+  const initialValues = [1, 2, 3, 4, 5];
+
+  const reduceFn = initialValues?.reduce((acc, elem) => {
+    return acc + elem;
+  });
 
   return (
-
     <div>
       <ul>{listItems}</ul>
       <div>{data}</div>
-
       <Forms
         value={name}
         handleChange={(e) => setName(e.target.value)}
         handleSubmit={handleSubmit}
         disabled={!name}
       />
-
       <FeedbackForm
         value={score}
         handleChange={(e) => setScore(e.target.value)}
@@ -90,7 +90,6 @@ export default function App() {
         commentHandleChange={(e) => setComment(e.target.value)}
         feedbackHandleSubmit={feedbackHandleSubmit}
       />
-
       <Header />
       <ContextApi />
       <ArrayDestructuring />
@@ -106,7 +105,7 @@ export default function App() {
       <SignUp />
       <Tracker />
       <DessertFn />
-
+      <h1> Reduce: {reduceFn}</h1>
       /******************Stepper******************* */
     </div>
   );
