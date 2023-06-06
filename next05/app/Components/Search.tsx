@@ -29,7 +29,7 @@ function Search() {
       />
 
       <button className="p-2 text-xl rounded-xl bg-slate-300 ml-2 font-bold">
-        🚀
+        🚀 
       </button>
     </form>
   );
