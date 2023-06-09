@@ -1,3 +1,6 @@
+// https://<your-site.com>/api/revalidate?secret=<token>
+// http://localhost:3000/ap/revalidate?path=/&secret='6bc3b5a5383c0a87cbca4309ac717e00'
+
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
