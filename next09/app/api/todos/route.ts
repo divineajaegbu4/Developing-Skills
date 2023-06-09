@@ -13,7 +13,7 @@ export async function GET(request: Request) {
 
     return new NextResponse(JSON.stringify(todos), {
         headers: {
-            'Access-Control-Allow-Origin': origin || "*",
+            'Access-Control-Allow-Origin': origin ?? "*",
             'Content-Type': 'application/json',
         }
     })
