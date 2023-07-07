@@ -1,0 +1,1 @@
+const DATA_API_KEY = "divineajaegbuislearningnextjs"
